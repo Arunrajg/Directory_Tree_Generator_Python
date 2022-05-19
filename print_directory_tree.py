@@ -1,4 +1,3 @@
-from email import contentmanager
 from pathlib import Path
 import os
 
@@ -47,6 +46,7 @@ def make_tree(root: str, level: int = -1, directories_only: bool = False, criter
 
 def print_tree(input_folder: str, level=-1, directory_only=False):
     paths = make_tree(input_folder, level, directory_only)
+    output_file = f"{input_folder}/tree_structure.txt"
     output_file = f"{input_folder}/tree_structure.txt"
     if os.path.exists(output_file):
         os.remove(output_file)
